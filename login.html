@@ -7,38 +7,39 @@
     <link rel="stylesheet" href="estilos/estilos.css">
     <title>Document</title>
 </head>
-<body>
-    <header>
-        <span class="encabezado">
-            <div class="logoHome">
-                <a href="index.html"><img src="media/logo-mascara.png" alt="log" style="height: 1cm;"></a>
-                <h3>COMBAT NET</h3>
-            </div>
-            <div class="menuPagina">
-                <a href="show.html">SHOWS</a> </li>
-                <a href="mma.html">MMA</a></li>
-                <a href="shop.html">SHOP</a></LI>
-            </div>
-            <div class="ingresoUsuario">
-                <a href="login.html" id="login">LOGIN</a>
-                <img src="media/user.jpeg" alt="icon" class="user">
-            </div>
-         </span>   
-    </header>
-    <main>
-        <article style="text-align: center;">
+<body class="bodyLogin">
+    <header class="encabezado">
+        <div class="logoHome">
+            <a href="index.html"><img src="media/logo-mascara.png" alt="log" class="mascara"></a>
+            <h3>COMBAT NET</h3>
+        </div>
+        <div class="menuPagina">
+            <a href="show.html">SHOWS</a> </li>
+            <a href="mma.html">MMA</a></li>
+            <a href="shop.html">SHOP</a></LI>
+        </div>
+        <div class="ingresoUsuario">
+            <a href="login.html" id="login">LOGIN</a>
+            <img src="media/user.jpeg" alt="icon" class="user">
+        </div>     
+</header>
+    <main class="mainlLogin"> 
+        <img src="media/undisputed.jpeg" alt="">
+        <article class="cuestionario">
+            
+            <img src="media/logo-mascara.png" alt="">
             <form action="" method="get" enctype="multipart/form-data">
 
                 <label for="usuario"> Usuario</label>
-                <input type="text" name="usuario">
+                <input type="text" name="usuario" class="texto">
                 <br>
                 <label for="password">password</label>
-                <input type="password" name="passwordß">
+                <input type="password" name="password" class="texto">
 
                 <br>
-                <input type="submit" name="enviar" value="enviar">
+                <input type="submit" name="enviar" value="enviar" class="boton">
             </form>
-        </article>
+        </article> 
     </main>
     <footer class="pieDePagina">
         <p style="color: azure;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officia, repudiandae, eos quod, cumque doloribus earum recusandae delectus dolore facilis exercitationem fugit temporibus! Minima doloribus qui aut sapiente pariatur. Nulla?</p>

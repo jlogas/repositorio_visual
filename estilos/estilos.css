@@ -6,8 +6,8 @@
     
 }
 .encabezado{
+grid-area: cabeza;
 height: auto;
-background-color: blue;
 display: flex;
 flex-direction: row;
 }
@@ -35,7 +35,6 @@ border: solid white;
 color: white;
 display: flex;
 flex-direction: column;
-justify-content: center;
 align-items: center;
 padding: 2% 2% 2% 2%;
 }
@@ -70,19 +69,27 @@ justify-content: space-evenly;
     
 }
 .pieDePagina{
+    grid-area: pie;
     background-color: black;
     color: white;
     height: auto;
     width: 100%;
     margin-top: 3%;
-
-    
 }
 
 /*------------------------------------------------------------------------INDEX---------------------*/
-
+.bodyIndex{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1/3fr 1fr 1/3 ;
+    grid-template-areas:
+    "cabeza"
+    "main1"
+    "pie"
+    ;
+}
 .mainIndex{
-    
+    grid-area: main1;
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: 5% repeat(2,1fr) ;
@@ -140,9 +147,32 @@ justify-content: space-evenly;
     margin-bottom: 5%;   
 }
 /*---------------------------------------------------------------SHOWS*------------------------*/
+.bodyShow{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1/3fr 1fr 1/3 ;
+    grid-template-areas:
+    "cabeza"
+    "main2"
+    "pie"
+    ;
+}
+
+.mainShow{
+    grid-area: main2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0,4% 1fr 1.5 1fr ;
+    grid-template-areas:
+    "s1"
+    "resumen"
+    "s2"
+    "eventos"
+    ;
+}
 .iconoPlay{
     width: 4%;
-    height: 4%;
+    height: 50%;
 }
 .subtitulo1{
     grid-area: s1;
@@ -154,23 +184,11 @@ justify-content: space-evenly;
 }
 .subs{
     background-color: red;
-    padding: 1% 1% 1% 1%;
+    padding: 1% 1% 3% 1%;
     margin: 1% 1% 1% 1%;;
-    border-radius: 10px;
-    width: auto;
+    border-radius: 20px;
     height: 10%;
     font-size: 100%;
-}
-.mainShow{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0,5% 1fr 1.5 1fr ;
-    grid-template-areas:
-    "s1"
-    "resumen"
-    "s2"
-    "eventos"
-    ;
 }
 .resumenes{
     grid-area: resumen;
@@ -197,7 +215,7 @@ justify-content: space-evenly;
 .subtitulo2 h2 {
     background-color: red;
     margin-left: 1%;
-    border-radius: 25%;
+    border-radius: 20px;
     font-size: 100%;
     padding: 1% 1% 1% 1% ;  
 }
@@ -219,8 +237,20 @@ justify-content: space-evenly;
     height: 20%;
 }
 /*---------------------------------------------------------------SHOP*------------------------*/
+.bodyShop{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1/3fr 1fr 1/3 ;
+    grid-template-areas:
+    "cabeza"
+    "main3"
+    "pie"
+    ;
+}
+
 
 .mainShop{
+    grid-area: main3;
     display: grid;
     grid-template-columns: repeat(2,1fr) 0,5fr;
     grid-template-rows: repeat(2,1fr) 0,7fr 1fr;
@@ -272,8 +302,8 @@ justify-content: space-evenly;
 
 .desceuntos{
     grid-area: d1;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 3%;
+    margin-bottom: 1%;
     color: white;
 }
 .desceuntos p{
@@ -281,10 +311,10 @@ justify-content: space-evenly;
     background-color: red;
     display: inline;
     padding: 1% 1% 1% 1%;
-    border-radius: 25%;
+    border-radius: 20px;
 }
 .productosDescuentos{
-    padding: 3% 3% 3% 3%;
+    padding: 0% 3% 3% 3%;
     grid-area: pd;
     margin-bottom: 3%;
     display: flex;
@@ -299,3 +329,71 @@ justify-content: space-evenly;
     width: 30%;
     padding-top: 3%;
 }
+/*---------------------------------------------------------------LOGIN*------------------------*/
+.bodyLogin{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1/3fr 1fr 1/2fr ;
+    grid-template-areas:
+    "cabeza"
+    "main4"
+    "pie"
+    ;
+    background-color: black;
+    
+}
+.mainlLogin{
+    grid-area: main4;
+    padding: 10% ;
+    padding-bottom: 10%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mainlLogin img{
+    height: 100%;
+    width: 60%;
+    margin-right: 5%;
+}
+
+.cuestionario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border: groove white;
+    padding: 10% 1% 10% 1%;
+    border-radius: 20px;
+    color: white;
+}
+
+
+.boton{
+    margin: 5%;
+    padding :4%;
+    margin-left: 10%;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    border: red;
+
+}
+
+.texto{
+    margin-left: 10%;
+    border-radius: 20px;
+}
+
+.cuestionario label{
+    margin: 5%;
+    margin-left: 10%;
+}
+
+.cuestionario img{
+    width: 30%;
+    height: 50%;
+}
+
