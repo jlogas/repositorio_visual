@@ -397,3 +397,90 @@ justify-content: space-evenly;
     height: 50%;
 }
 
+/*---------------------------------------------------------------MMA*------------------------*/
+.bodyMma{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1/3fr 1fr 1/2fr ;
+    grid-template-areas:
+    "cabeza"
+    "main5"
+    "pie"
+    ;
+}
+
+.mainMma{
+    grid-area: main5;
+}
+
+.mainMma1{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "r1 r1"
+    "ima vid"
+    ;
+    gap: 3%;
+    padding: 0% 1% 0% 1%;
+}
+
+.reja{
+    grid-area: r1;  
+}
+.imagenes{
+    grid-area: ima;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;  
+}
+
+.imagenes img{
+    height: 30%;
+    width: 50%;
+}
+
+.videoMMA{
+    grid-area: vid;
+    display: grid;
+    place-content: center;
+}
+
+.mainMma2{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas: 
+  "c1 ar1"
+  "c2 ar2"
+  ;
+  
+}
+
+.mainMma2 img{
+    width: 100%;
+    height: 90%;
+}
+.carteleraMma1{
+    display: grid;
+    place-content: center;
+    grid-area: c1;
+}
+.articuloMma1{
+    grid-area: ar1;
+    display: grid;
+    place-content: center;
+    padding: 0% 2% 0% 2%;
+}
+.carteleraMma2{
+    display: grid;
+    place-content: center;
+    grid-area: c2;
+}
+.articuloMma2{
+    display: grid;
+    place-content: center;
+    grid-area: ar2;
+    padding: 0% 2% 0% 2%;;
+}
