@@ -3,11 +3,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+}
+video{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
 }
 .encabezado{
-grid-area: cabeza;
-height: auto;
+height: 150px;
 display: flex;
 flex-direction: row;
 }
@@ -28,9 +35,8 @@ flex-direction: row;
  }
 
 .logoHome{
-background-color: black;
+background-image: linear-gradient(to top, rgba(0, 0, 0, 0.963) ,rgb(53, 51, 51) , rgb(151, 149, 149));
 width: 15%;
-font-size: 85%;
 border: solid white;
 color: white;
 display: flex;
@@ -39,10 +45,15 @@ align-items: center;
 padding: 2% 2% 2% 2%;
 }
 
+.logoHome h3{
+    font-size: 70%;
+    margin-top: 10%;
+}
+
 
 
 .menuPagina{
-background-color:black;
+background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.963) ,rgb(53, 51, 51) , rgb(151, 149, 149));
 width: 70%;
 border: solid white;
 border-left: black;
@@ -53,18 +64,23 @@ justify-content: space-evenly;
 }
 
 .ingresoUsuario{
-    background-color: black;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.963) ,rgb(53, 51, 51) , rgb(151, 149, 149));
     width: 15%;
     border: solid white;
     border-left: black;  
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2%;
+    font-size: 70%;
 }
+
+
 
 .user{
     height: 50%;
-    width: 50%;
+    width: 30%;
+    margin-left: 5%;
     text-align: end;
     
 }
@@ -73,21 +89,10 @@ justify-content: space-evenly;
     background-color: black;
     color: white;
     height: auto;
-    width: 100%;
-    margin-top: 3%;
+    margin-top: 10%;
 }
 
 /*------------------------------------------------------------------------INDEX---------------------*/
-.bodyIndex{
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 1/3fr 1fr 1/3 ;
-    grid-template-areas:
-    "cabeza"
-    "main1"
-    "pie"
-    ;
-}
 .mainIndex{
     grid-area: main1;
     display: grid;
@@ -108,9 +113,13 @@ justify-content: space-evenly;
     font-weight: bold;
     font-size: 150%;
 }
+.lead{
+    color: white;
+    padding: 1%;
+    border-radius: 20px;
+}
 .mainIndex h2{
-    grid-area: h2;
-    
+    grid-area: h2;  
 }
 .noticiaProncipal{
     grid-area: n1;
@@ -132,11 +141,11 @@ justify-content: space-evenly;
 }
 .noticia2 img{
     width: 50%;
-    height: 20%;
+    height: 40%;
 }
 .noticia3 img{
     width: 50%;
-    height: 20%;
+    height: 100%;
 }
 .noticiaProncipal img{
     padding-top: 5%;
@@ -147,22 +156,11 @@ justify-content: space-evenly;
     margin-bottom: 5%;   
 }
 /*---------------------------------------------------------------SHOWS*------------------------*/
-.bodyShow{
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 1/3fr 1fr 1/3 ;
-    grid-template-areas:
-    "cabeza"
-    "main2"
-    "pie"
-    ;
-}
 
 .mainShow{
-    grid-area: main2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0,4% 1fr 1.5 1fr ;
+    grid-template-rows: 0.1fr 1fr 0.1fr 0.3fr ;
     grid-template-areas:
     "s1"
     "resumen"
@@ -184,7 +182,7 @@ justify-content: space-evenly;
 }
 .subs{
     background-color: red;
-    padding: 1% 1% 3% 1%;
+    padding: 1% 1% 2% 1%;
     margin: 1% 1% 1% 1%;;
     border-radius: 20px;
     height: 10%;
@@ -225,32 +223,15 @@ justify-content: space-evenly;
 }
 .eventos{
     grid-area: eventos;   
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;   
+    padding: 3%;
 }
 .eventos img{
-    margin-top: 3%;
-    margin-bottom: 3%;
-    width: 30%;
-    height: 20%;
+    width: 400px;
+    height: 500px;
 }
 /*---------------------------------------------------------------SHOP*------------------------*/
-.bodyShop{
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 1/3fr 1fr 1/3 ;
-    grid-template-areas:
-    "cabeza"
-    "main3"
-    "pie"
-    ;
-}
-
 
 .mainShop{
-    grid-area: main3;
     display: grid;
     grid-template-columns: repeat(2,1fr) 0,5fr;
     grid-template-rows: repeat(2,1fr) 0,7fr 1fr;
@@ -331,19 +312,9 @@ justify-content: space-evenly;
 }
 /*---------------------------------------------------------------LOGIN*------------------------*/
 .bodyLogin{
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 1/3fr 1fr 1/2fr ;
-    grid-template-areas:
-    "cabeza"
-    "main4"
-    "pie"
-    ;
     background-color: black;
-    
 }
 .mainlLogin{
-    grid-area: main4;
     padding: 10% ;
     padding-bottom: 10%;
     background-color: black;
@@ -385,6 +356,7 @@ justify-content: space-evenly;
 .texto{
     margin-left: 10%;
     border-radius: 20px;
+    width: 70%;
 }
 
 .cuestionario label{
@@ -392,26 +364,13 @@ justify-content: space-evenly;
     margin-left: 10%;
 }
 
-.cuestionario img{
+.mascara2{
     width: 30%;
     height: 50%;
 }
 
 /*---------------------------------------------------------------MMA*------------------------*/
-.bodyMma{
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 1/3fr 1fr 1/2fr ;
-    grid-template-areas:
-    "cabeza"
-    "main5"
-    "pie"
-    ;
-}
 
-.mainMma{
-    grid-area: main5;
-}
 
 .mainMma1{
     display: grid;
@@ -423,6 +382,7 @@ justify-content: space-evenly;
     ;
     gap: 3%;
     padding: 0% 1% 0% 1%;
+    margin-bottom: 10%;
 }
 
 .reja{
@@ -445,9 +405,17 @@ justify-content: space-evenly;
     grid-area: vid;
     display: grid;
     place-content: center;
+    padding: 10%;
+}
+.videoMMA iframe{
+    height: 120%;
+    width: 110%;
+   
 }
 
+
 .mainMma2{
+  color: white;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(2,1fr);
@@ -483,4 +451,131 @@ justify-content: space-evenly;
     place-content: center;
     grid-area: ar2;
     padding: 0% 2% 0% 2%;;
+}
+
+@media(max-width:328px){
+    .user{
+        display: none;
+    }
+    .encabezado{
+        height: 80px;
+    }
+    .menuPagina{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ingresoUsuario a{
+        font-size: 80%;
+        padding-left: 5%;
+        margin-left: 2%;
+    }
+    .logoHome{
+        font-size: 50%;
+    }
+    .mainIndex{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1/3fr 2fr 1fr 1fr ;
+    grid-template-areas:
+    "h2 "
+    "n1"
+    "n2"
+    "n3"
+    ;
+    }
+    .noticiaProncipal{
+        margin-bottom: 30%;
+        overflow: auto;
+    }
+
+    .noticia3{
+        margin-bottom: 50%;
+    }
+
+    .subtitulo1 h2{
+        padding-bottom: 8%;
+    }
+    .iconoPlay{
+        width: 10%;
+    }
+    .resumenes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .resumenes iframe{
+        height: 150px;
+        width: 200px;
+    }
+    .iconoPlay2{
+        height: 80%;
+        width: 10%;
+        margin-bottom: 2%;
+    }
+    .eventos img{
+        height: 180px;
+        width: 100px;
+    }
+    .mainShop{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr) 0,7fr 1fr;
+        grid-template-areas:
+        "p1 p1"
+        "p2 p2"
+        "p3 p3"
+        "d1 d1"
+        "pd pd"
+        ; 
+        padding-left: 3%;
+        padding-right: 3%;
+        padding: auto;
+        margin-top: 3%;
+    }
+    .productosDescuentos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .productosDescuentos img{
+        height: 150px;
+        margin-top: 10%;
+    }
+
+    .undis{
+        display: none;
+        
+    }
+
+
+    .mainMma1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: 
+        "r1"
+        "vid"
+        ;
+        gap: 3%;
+        padding: 0% 1% 0% 1%;
+        margin-bottom: 10%;
+    }
+
+    .imagenes{
+        display: none;
+    }
+
+    .mainMma2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas: 
+        "c1"
+        "ar1"
+        "c2"
+        "ar2"
+        ;
+        
+      }
 }
