@@ -304,6 +304,14 @@ header h2 {
   height: 350px;
   width: 30%;
   padding-top: 3%;
+  opacity: 0.8;
+}
+.productosDescuentos img:hover {
+  height: 500px;
+  width: 40%;
+  padding: 1%;
+  opacity: 1;
+  filter: contrast(120%);
 }
 
 /*---------------------------------------------------------------LOGIN*------------------------*/
@@ -401,8 +409,8 @@ header h2 {
 
 .imagenes img:hover {
   cursor: crosshair;
-  width: 100%;
-  height: 180px;
+  width: 80%;
+  height: 350px;
   opacity: 1;
   filter: contrast(120%);
 }
