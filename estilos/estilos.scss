@@ -1,0 +1,602 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+video{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+.encabezado{
+height: 150px;
+display: flex;
+flex-direction: row; 
+    a{
+        color: white;
+        text-decoration: none;
+        font-size: 80%;
+     }
+ }
+
+
+
+ header h2{
+    margin-left: 3%;
+    margin-top: 3%;
+ }
+
+ .mascara{
+    width: 30%;
+    margin-left: 30%;
+ }
+
+.logoHome{
+background-image: linear-gradient(to top, rgba(0, 0, 0, 0.963) ,rgb(53, 51, 51) , rgb(151, 149, 149));
+width: 15%;
+border: solid white;
+color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 2% 2% 2% 2%;
+    h3{
+    font-size: 70%;
+    margin-top: 10%;
+        }
+}
+
+.menuPagina{
+background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.963) ,rgb(53, 51, 51) , rgb(151, 149, 149));
+width: 70%;
+border: solid white;
+border-left: black;
+display: flex;
+align-items: center;
+padding-left: 10px;
+justify-content: space-evenly;
+}
+
+.ingresoUsuario{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.963) ,rgb(53, 51, 51) , rgb(151, 149, 149));
+    width: 15%;
+    border: solid white;
+    border-left: black;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    font-size: 70%;
+}
+
+
+
+.user{
+    height: 50%;
+    width: 30%;
+    margin-left: 5%;
+    text-align: end;
+    
+}
+.pieDePagina{
+    grid-area: pie;
+    background-color: black;
+    color: white;
+    height: auto;
+    margin-top: 10%;
+}
+
+/*------------------------------------------------------------------------INDEX---------------------*/
+.mainIndex{
+    grid-area: main1;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 5% repeat(2,1fr) ;
+    grid-template-areas:
+    "h2 h2 h2 h2 h2"
+    "n1 n1 n1 n2 n2"
+    "n1 n1 n1 n3 n3"
+    ;
+    gap: 2%;
+    width: 90%;
+}
+.fechas{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 150%;
+}
+.lead{
+    color: white;
+    padding: 1%;
+    border-radius: 20px;
+}
+.mainIndex h2{
+    grid-area: h2;  
+}
+.noticiaProncipal{
+    grid-area: n1;
+    padding-left: 5%;
+    overflow: auto;
+    img{
+        padding-top: 5%;
+    }
+}
+.noticia2{
+    grid-area: n2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 2% 2% 2%;
+        img{
+            width: 100%;
+            height: 50%;
+        }   
+}
+.noticia3{
+    grid-area: n3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 2% 2% 2%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.articulo{
+    padding: 2% 2% 2% 2%;
+    font-size: 100%;
+    margin-bottom: 5%;   
+}
+/*---------------------------------------------------------------SHOWS*------------------------*/
+
+.mainShow{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr 0.3fr ;
+    grid-template-areas:
+    "s1"
+    "resumen"
+    "s2"
+    "eventos"
+    ;
+}
+.iconoPlay{
+    width: 4%;
+    height: 50%;
+}
+.subtitulo1{
+    grid-area: s1;
+    display:flex;
+    color: white;
+    align-items: center;
+    height: auto;
+
+}
+.subs{
+    background-color: red;
+    padding: 1% 1% 2% 1%;
+    margin: 1% 1% 1% 1%;;
+    border-radius: 20px;
+    height: 10%;
+    font-size: 100%;
+}
+.resumenes{
+    grid-area: resumen;
+    border-top: groove gray;
+    border-bottom: groove gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+    iframe{
+        padding: 3% 2% 3% 2% ;
+    }
+}
+
+.subtitulo2{
+    grid-area: s2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.subtitulo2 h2 {
+    background-color: red;
+    margin-left: 1%;
+    border-radius: 20px;
+    font-size: 100%;
+    padding: 1% 1% 1% 1% ;  
+}
+.iconoPlay2{
+    width: 4%;
+    height: 90;
+}
+.eventos{
+    grid-area: eventos;   
+    padding: 3%;
+    img{
+        width: 400px;
+        height: 500px;
+    }
+}
+
+/*---------------------------------------------------------------SHOP*------------------------*/
+
+.mainShop{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) 0,5fr;
+    grid-template-rows: repeat(2,1fr) 0,7fr 1fr;
+    grid-template-areas:
+    "p1 p1 p2"
+    "p1 p1 p3"
+    "d1 d1 d1"
+    "pd pd pd"
+    ; 
+    padding-left: 3%;
+    padding-right: 3%;
+    padding: auto;
+    margin-top: 3%;
+    
+}
+
+.productoBullet{
+    background-color: #D9D9D9;
+    grid-area: p1;
+    padding: 3% 2% 2% 5%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.producto2{
+    background-color: #D9D9D9;
+    grid-area: p2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center; 
+}
+.producto2 img{
+    height: 80%;
+    width: 45%;
+}
+.producto3{
+    background-color: #D9D9D9;
+    grid-area: p3;
+    padding: 3% 0% 3% 15%;
+}
+.producto3 img{
+    height: 90%;
+    width: 90%;  
+}
+
+.desceuntos{
+    grid-area: d1;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    color: white;
+    p{
+
+        background-color: red;
+        display: inline;
+        padding: 1% 1% 1% 1%;
+        border-radius: 20px;
+    }
+}
+
+.productosDescuentos{
+    padding: 0% 3% 3% 3%;
+    grid-area: pd;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    img{
+        height: 350px;
+        width: 30%;
+        padding-top: 3%;
+    }
+    
+}
+
+
+/*---------------------------------------------------------------LOGIN*------------------------*/
+.bodyLogin{
+    background-color: black;
+}
+.mainlLogin{
+    padding: 10% ;
+    padding-bottom: 10%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img{
+        height: 100%;
+        width: 60%;
+        margin-right: 5%;
+    }
+    
+}
+
+.cuestionario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border: groove white;
+    padding: 10% 1% 10% 1%;
+    border-radius: 20px;
+    color: white;
+}
+
+
+.boton{
+    margin: 5%;
+    padding :4%;
+    margin-left: 10%;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    border: red;
+
+}
+
+.texto{
+    margin-left: 10%;
+    border-radius: 20px;
+    width: 70%;
+}
+
+.cuestionario label{
+    margin: 5%;
+    margin-left: 10%;
+}
+
+.mascara2{
+    width: 30%;
+    height: 50%;
+}
+
+/*---------------------------------------------------------------MMA*------------------------*/
+
+
+.mainMma1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "r1 r1"
+    "ima vid"
+    ;
+    gap: 3%;
+    padding: 0% 1% 0% 1%;
+    margin-bottom: 10%;
+}
+
+.reja{
+    grid-area: r1;  
+}
+.imaufc{
+    width: 30%;
+}
+.imagenes{
+    grid-area: ima;
+    display: flex;
+    margin-left: 5%;
+    padding: 2%;
+}
+
+.imagenes img{
+   width: 0px;
+   flex-grow: 1;
+   object-fit: cover;
+   opacity: .8;
+   transition:  .5s ease;
+}
+
+.imagenes img:hover{
+    cursor: crosshair;
+    width: 100%;
+    height: 180px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.videoMMA{
+    grid-area: vid;
+    display: grid;
+    place-content: center;
+    padding: 10%;
+}
+.videoMMA iframe{
+    height: 120%;
+    width: 110%;
+   
+}
+
+
+.mainMma2{
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas: 
+  "c1 ar1"
+  "c2 ar2"
+  ;
+  
+}
+
+.mainMma2 img{
+    width: 100%;
+    height: 90%;
+}
+.carteleraMma1{
+    display: grid;
+    place-content: center;
+    grid-area: c1;
+}
+.articuloMma1{
+    grid-area: ar1;
+    display: grid;
+    place-content: center;
+    padding: 0% 2% 0% 2%;
+}
+.carteleraMma2{
+    display: grid;
+    place-content: center;
+    grid-area: c2;
+}
+.articuloMma2{
+    display: grid;
+    place-content: center;
+    grid-area: ar2;
+    padding: 0% 2% 0% 2%;;
+}
+
+
+@media(max-width:768px) and (min-width:328px){
+    
+    .user{
+        display: none;
+    }
+    .encabezado{
+        height: 80px;
+    }
+    .menuPagina{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ingresoUsuario a{
+        font-size: 80%;
+        padding-left: 5%;
+        margin-left: 2%;
+    }
+    .logoHome{
+        font-size: 50%;
+    }
+    .mainIndex{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1/3fr 2fr 1fr 1fr ;
+    grid-template-areas:
+    "h2 "
+    "n1"
+    "n2"
+    "n3"
+    ;
+    }
+    .noticiaProncipal{
+        margin-bottom: 30%;
+        overflow: auto;
+    }
+
+    .noticia3{
+        margin-bottom: 50%;
+    }
+
+    .subtitulo1 h2{
+        padding-bottom: 8%;
+    }
+    .iconoPlay{
+        width: 10%;
+    }
+    .resumenes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .resumenes iframe{
+        height: 150px;
+        width: 200px;
+    }
+    .iconoPlay2{
+        height: 80%;
+        width: 10%;
+        margin-bottom: 2%;
+    }
+    .eventos img{
+        height: 180px;
+        width: 100px;
+    }
+    .mainShop{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr) 0,7fr 1fr;
+        grid-template-areas:
+        "p1 p1"
+        "p2 p2"
+        "p3 p3"
+        "d1 d1"
+        "pd pd"
+        ; 
+        padding-left: 3%;
+        padding-right: 3%;
+        padding: auto;
+        margin-top: 3%;
+    }
+    .productosDescuentos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .productosDescuentos img{
+        height: 150px;
+        margin-top: 10%;
+    }
+
+    .undis{
+        display: none;
+        
+    }
+
+
+    .mainMma1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: 
+        "r1"
+        "vid"
+        ;
+        gap: 3%;
+        padding: 0% 1% 0% 1%;
+        margin-bottom: 10%;
+    }
+
+    .imagenes{
+        display: none;
+    }
+
+    .mainMma2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas: 
+        "c1"
+        "ar1"
+        "c2"
+        "ar2"
+        ;
+        
+      }
+}
