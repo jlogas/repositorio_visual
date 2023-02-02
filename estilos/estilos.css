@@ -36,13 +36,13 @@ header h2 {
 }
 
 .logoHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.963), rgb(53, 51, 51), rgb(151, 149, 149));
   width: 15%;
   border: solid white;
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 2% 2% 2% 2%;
 }
 .logoHome h3 {
@@ -82,10 +82,32 @@ header h2 {
 
 .pieDePagina {
   grid-area: pie;
-  background-color: black;
+  background-color: rgb(95, 92, 92);
   color: white;
   height: auto;
+  padding: 1%;
+  margin: 1%;
   margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  opacity: 0.9;
+}
+.pieDePagina img {
+  filter: grayscale(100%);
+  border-radius: 20px;
+}
+.pieDePagina .redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.pieDePagina .redes img {
+  height: 100px;
+}
+.pieDePagina .redes img:hover {
+  filter: grayscale(0%);
 }
 
 /*------------------------------------------------------------------------INDEX---------------------*/
@@ -171,8 +193,8 @@ header h2 {
 .subtitulo1 {
   grid-area: s1;
   display: flex;
-  color: white;
   align-items: center;
+  color: white;
   height: auto;
 }
 
@@ -190,7 +212,6 @@ header h2 {
   border-top: groove gray;
   border-bottom: groove gray;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   height: auto;
@@ -202,7 +223,6 @@ header h2 {
 .subtitulo2 {
   grid-area: s2;
   display: flex;
-  flex-direction: row;
   align-items: center;
   color: white;
   margin-top: 2%;
@@ -324,8 +344,8 @@ header h2 {
   padding-bottom: 10%;
   background-color: black;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
 }
 .mainlLogin img {
   height: 100%;
@@ -476,7 +496,7 @@ header h2 {
   .menuPagina {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
   }
   .ingresoUsuario a {
     font-size: 80%;
@@ -499,11 +519,12 @@ header h2 {
   .noticia3 {
     margin-bottom: 50%;
   }
-  .subtitulo1 h2 {
-    padding-bottom: 8%;
+  .subs {
+    padding-bottom: 5%;
   }
   .iconoPlay {
-    width: 10%;
+    width: 8%;
+    margin-left: 2%;
   }
   .resumenes {
     display: flex;
@@ -562,5 +583,26 @@ header h2 {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas: "c1" "ar1" "c2" "ar2";
+  }
+  .pieDePagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pieDePagina img {
+    padding: 5%;
+    width: 100%;
+    height: 30%;
+  }
+  .pieDePagina .redes {
+    display: flex;
+    flex-direction: row;
+  }
+  .pieDePagina .redes p {
+    display: none;
+  }
+  .pieDePagina .redes img {
+    width: 30%;
+    height: 30%;
   }
 }/*# sourceMappingURL=estilos.css.map */

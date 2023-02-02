@@ -24,6 +24,16 @@ flex-direction: row;
      }
  }
 
+ @mixin centrar-colum-centro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ @mixin centrar-fila{
+    display: flex;
+    align-items: center;
+ }
+
 
 
  header h2{
@@ -37,13 +47,11 @@ flex-direction: row;
  }
 
 .logoHome{
+@include centrar-colum-centro;
 background-image: linear-gradient(to top, rgba(0, 0, 0, 0.963) ,rgb(53, 51, 51) , rgb(151, 149, 149));
 width: 15%;
 border: solid white;
 color: white;
-display: flex;
-flex-direction: column;
-align-items: center;
 padding: 2% 2% 2% 2%;
     h3{
     font-size: 70%;
@@ -56,8 +64,7 @@ background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.963) ,rgb(53, 51, 5
 width: 70%;
 border: solid white;
 border-left: black;
-display: flex;
-align-items: center;
+@include centrar-fila;
 padding-left: 10px;
 justify-content: space-evenly;
 }
@@ -67,8 +74,7 @@ justify-content: space-evenly;
     width: 15%;
     border: solid white;
     border-left: black;  
-    display: flex;
-    align-items: center;
+    @include centrar-fila;
     justify-content: center;
     padding: 2%;
     font-size: 70%;
@@ -85,10 +91,31 @@ justify-content: space-evenly;
 }
 .pieDePagina{
     grid-area: pie;
-    background-color: black;
+    background-color: rgb(95, 92, 92);
     color: white;
     height: auto;
+    padding: 1%;
+    margin: 1%;
     margin-top: 10%;
+    display: flex;
+    flex-direction: row ;
+    border-radius: 15px;
+    opacity: 0.9;
+    img{
+        filter: grayscale(100%);
+        border-radius: 20px;
+    }
+    .redes{
+        @include centrar-colum-centro;
+        width: 50%;
+        img{
+            height: 100px;
+            &:hover{
+                filter: grayscale(0%);
+            }
+         }
+    }
+
 }
 
 /*------------------------------------------------------------------------INDEX---------------------*/
@@ -129,9 +156,7 @@ justify-content: space-evenly;
 }
 .noticia2{
     grid-area: n2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include centrar-colum-centro;
     padding: 2% 2% 2% 2%;
         img{
             width: 100%;
@@ -140,9 +165,7 @@ justify-content: space-evenly;
 }
 .noticia3{
     grid-area: n3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include centrar-colum-centro;
     padding: 2% 2% 2% 2%;
     img{
         width: 100%;
@@ -175,9 +198,8 @@ justify-content: space-evenly;
 }
 .subtitulo1{
     grid-area: s1;
-    display:flex;
+    @include centrar-fila;
     color: white;
-    align-items: center;
     height: auto;
 
 }
@@ -194,7 +216,6 @@ justify-content: space-evenly;
     border-top: groove gray;
     border-bottom: groove gray;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     height: auto;
@@ -205,9 +226,7 @@ justify-content: space-evenly;
 
 .subtitulo2{
     grid-area: s2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include centrar-fila;
     color: white;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -331,9 +350,9 @@ justify-content: space-evenly;
     padding: 10% ;
     padding-bottom: 10%;
     background-color: black;
-    display: flex;
+    @include centrar-fila;
     justify-content: space-around;
-    align-items: center;
+    
     img{
         height: 100%;
         width: 60%;
@@ -343,9 +362,7 @@ justify-content: space-evenly;
 }
 
 .cuestionario{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include centrar-colum-centro;
     width: 50%;
     height: 100%;
     background-color: black;
@@ -490,9 +507,7 @@ justify-content: space-evenly;
         height: 80px;
     }
     .menuPagina{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include centrar-colum-centro;
     }
     .ingresoUsuario a{
         font-size: 80%;
@@ -522,16 +537,17 @@ justify-content: space-evenly;
         margin-bottom: 50%;
     }
 
-    .subtitulo1 h2{
-        padding-bottom: 8%;
+
+    .subs{
+        padding-bottom: 5%;
+
     }
     .iconoPlay{
-        width: 10%;
+        width: 8%;
+        margin-left: 2%
     }
     .resumenes{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include centrar-colum-centro;
     }
     .resumenes iframe{
         height: 150px;
@@ -606,5 +622,25 @@ justify-content: space-evenly;
         "ar2"
         ;
         
+      }
+
+      .pieDePagina{
+        @include centrar-colum-centro;
+        img{
+            padding: 5%;
+            width: 100%;
+            height: 30%;
+        }
+        .redes{
+            display: flex;
+            flex-direction: row;
+            p{
+                display: none;
+            }
+            img{
+                width: 30%;
+                height: 30%;
+            }
+        }
       }
 }
