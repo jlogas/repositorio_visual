@@ -141,7 +141,6 @@ header h2 {
 .noticiaProncipal {
   grid-area: n1;
   padding-left: 5%;
-  overflow: auto;
 }
 .noticiaProncipal img {
   padding-top: 5%;
